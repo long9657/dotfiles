@@ -62,18 +62,18 @@ Do the same steps with the other tools.
 Then run this to create symlinks
 
 ```shell
-stow nvim
-stow rofi
-stow alacritty
-stow i3
-stow monitor
-stow qutebrowser
-stow bash
-stow zsh
-stow others
-stow tmux
-stow wezterm
-stow ghostty
+stow --adopt nvim
+stow --adopt rofi
+stow --adopt alacritty
+stow --adopt i3
+stow --adopt monitor
+stow --adopt qutebrowser
+stow --adopt bash
+stow --adopt zsh
+stow --adopt others
+stow --adopt tmux
+stow --adopt wezterm
+stow --adopt ghostty
 ```
 
 for more information about gnustow: [link](https://www.gnu.org/software/stow/)
