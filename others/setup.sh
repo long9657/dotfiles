@@ -42,7 +42,8 @@ PKGS=(
     # LANGUAGES & RUNTIMES
     'python' 'python-pip' 
     'nodejs' 'npm' 
-    'jdk-openjdk' 'jre-openjdk'
+    'jdk-openjdk'
+    # 'jre-openjdk'
 
     # FONTS (Giao diện & Terminal)
     'ttf-jetbrains-mono-nerd'   # Font dự phòng phổ biến
