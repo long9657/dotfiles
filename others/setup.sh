@@ -25,7 +25,7 @@ PKGS=(
     # TERMINAL UTILITIES
     'zsh'                       # Shell
     'tmux'                      # Multiplexer
-    'neovim'                    # Editor
+    # 'neovim'                    # Editor
     'lsd'                       # New ls
     'zoxide'                    # New cd
     'fzf'                       # Fuzzy finder
@@ -39,7 +39,7 @@ PKGS=(
     'picom'                     # Compositor (Cần cho Ghostty transparency)
     'feh'                       # Wallpaper setter
     'rofi'                      # App launcher
-
+    'bob'
     # LANGUAGES & RUNTIMES
     'python' 'python-pip' 
     'nodejs' 'npm' 
