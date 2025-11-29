@@ -16,7 +16,7 @@ c.tabs.indicator.width = 0 # no tab indicators
 # c.window.transparent = True # apparently not needed
 c.tabs.width = '7%'
 # hidetab
-c.tabs.show = "never"
+# c.tabs.show = "never"
 
 # fonts
 c.fonts.default_family = []
@@ -42,3 +42,13 @@ config.bind("<d>", "cmd-run-with-count 15 scroll down")
 config.bind("<e>", "cmd-run-with-count 15 scroll up") 
 config.bind(',r', 'spawn --userscript readability-js')
 c.scrolling.smooth = True
+
+config.bind(
+    "<Escape>", "mode-leave ;; jseval -q document.activeElement.blur()", mode="insert"
+)
+config.bind(",M", "hint links spawn mpv {hint-url}")
+config.bind(",m", "spawn mpv {url}")
+with config.pattern("code.ptit.edu.vn") as p:
+    p.hints.selectors["all"].append('div[class="submit__pad__nav__input col-md-6"]')
+
+
