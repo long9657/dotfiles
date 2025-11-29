@@ -3,7 +3,7 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 plugins=(
     git
@@ -34,6 +34,26 @@ alias lt='ls --tree'
 
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
+alias f=fzf
+# preview with bat
+alias fp='fzf --preview="bat --color=always {}"'
+# open neovim with select file by tab
+alias fv='nvim $(fzf -m --preview="bat --color=always {}")'
+
+
+# my alias for an easier life
+alias v=nvim
+alias vim=nvim
+alias nv=nvim
+alias ovim=vim
+alias os='nvim ~/.zshrc'
+alias ss='source ~/.zshrc'
+alias k='kubectl'
+alias gr=./gradlew
+# source tmux
+alias stm='tmux source-file ~/.tmux.conf \;'
+# confirm before remove something... fk.
+alias rm="rm -i"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
