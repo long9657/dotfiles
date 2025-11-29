@@ -63,8 +63,14 @@ Then run this to create symlinks
 
 ```shell
 stow nvim
+stow rofi
+stow alacritty
+stow i3
+stow monitor
+stow qutebrowser
+stow bash
 stow zsh
-stow aerospace
+stow others
 stow tmux
 stow wezterm
 stow ghostty
