@@ -1,13 +1,15 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
+export PATH="$HOME/.local/share/bob/nightly/bin:$PATH"
+
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/home/long/.local/share/bob/nightly/bin:$PATH"
 ZSH_THEME="robbyrussell"
 
 plugins=(
     git
-    archlinux
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
