@@ -16,11 +16,11 @@ local function pick_random_background(folder)
 end
 
 -- Gpu Setup
--- local gpus = wezterm.gui.enumerate_gpus()
--- config.webgpu_preferred_adapter = gpus[2]
--- config.front_end = "WebGpu"
-config.front_end = "OpenGL"
-config.prefer_egl = true
+local gpus = wezterm.gui.enumerate_gpus()
+config.webgpu_preferred_adapter = gpus[2]
+config.front_end = "WebGpu"
+-- config.front_end = "OpenGL"
+-- config.prefer_egl = true
 
 -- Performance Settings
 config.max_fps = 144
@@ -34,7 +34,6 @@ config.window_padding = {
 	bottom = "0",
 }
 config.adjust_window_size_when_changing_font_size = false
-config.default_prog = { "pwsh.exe", "-NoLogo" }
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 -- config.colors.cursor_bg = "green"
@@ -54,62 +53,35 @@ config.color_scheme = "Tokyo Night"
 -- config.font = wezterm.font("Monaspace Neon NF")
 -- config.font = wezterm.font("BlexMono Nerd Font Mono")
 -- config.font = wezterm.font("D2CodingLigature Nerd Font Mono")
-config.font = wezterm.font("Comic Code")
+-- config.font = wezterm.font("Comic Code")
 -- config.font = wezterm.font("Iosevka Nerd Font")
--- config.font = wezterm.font("Hack Nerd Font Mono")
+--  config.font = wezterm.font("Hack Nerd Font Mono")
 -- config.font = wezterm.font("Inconsolata Nerd Font Mono", { weight = "Regular", stretch = "Expanded" })
 -- config.font = wezterm.font("Fixedsys Excelsior", { weight = "Bold" })
 -- config.cell_width = 0.9
-config.font_size = 18
+config.font_size = 20
 -- config.custom_block_glyphs = false
 config.allow_win32_input_mode = false
 -- config.line_height = 1.2
 
 -- Transperancy
-config.window_background_opacity = 0.8 -- Set window opacity to 95% for better readability
+-- config.window_background_opacity = 0.8 -- Set window opacity to 95% for better readability
 -- config.window_background_opacity = 0.5
-config.win32_system_backdrop = "Acrylic"
-
-wezterm.on('window-resized', function(window, pane)
-  -- Lấy kích thước cửa sổ hiện tại
-  local dim = window:get_dimensions()
-  
-  -- Màn hình 4K thường rộng 3840px. 
-  -- Ta đặt ngưỡng > 3000px để nhận diện là màn hình lớn/4K.
-  if dim.pixel_width > 3000 then
-    local tab = window:active_tab()
-    if not tab then return end
-    
-    local panes = tab:panes()
-
-    -- LOGIC CHÍNH:
-    -- Chỉ thực hiện chia nếu tab hiện tại đang CHỈ CÓ 1 pane.
-    -- Điều này tránh việc nó cứ chia liên tục mỗi khi bạn kéo nhẹ cửa sổ.
-    if #panes == 1 then
-      pane:split({
-        direction = "Left",
-        size = 0.3, -- Kích thước pane phụ (30%)
-      })
-      
-      -- Sau khi chia xong, focus lại về pane chính bên phải
-      window:perform_action(wezterm.action.ActivatePaneDirection("Right"), pane)
-    end
-  end
-end)
+-- config.win32_system_backdrop = "Acrylic"
 
 -- Background
--- config.window_background_image = bg_image
--- config.window_background_image_hsb = {
--- 	-- Darken the background image by reducing it to 1/3rd
--- 	brightness = brightness,
---
--- 	-- You can adjust the hue by scaling its value.
--- 	-- a multiplier of 1.0 leaves the value unchanged.
--- 	hue = 1.0,
---
--- 	-- You can adjust the saturation also.
--- 	saturation = 0.8,
--- }
+config.window_background_image = bg_image
+config.window_background_image_hsb = {
+	-- Darken the background image by reducing it to 1/3rd
+	brightness = brightness,
+
+	-- You can adjust the hue by scaling its value.
+	-- a multiplier of 1.0 leaves the value unchanged.
+	hue = 1.0,
+
+	-- You can adjust the saturation also.
+	saturation = 0.8,
+}
 -- config.foreground_text_hsb = {
 -- 	hue = 1.0,
 -- 	saturation = 1.2,
@@ -256,6 +228,5 @@ config.keys = {
 		end),
 	},
 }
-
 -- and finally, return the configuration to wezterm
 return config
