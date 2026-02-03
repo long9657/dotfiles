@@ -16,11 +16,11 @@ local function pick_random_background(folder)
 end
 
 -- Gpu Setup
-local gpus = wezterm.gui.enumerate_gpus()
-config.webgpu_preferred_adapter = gpus[2]
-config.front_end = "WebGpu"
--- config.front_end = "OpenGL"
--- config.prefer_egl = true
+-- local gpus = wezterm.gui.enumerate_gpus()
+-- config.webgpu_preferred_adapter = gpus[2]
+-- config.front_end = "WebGpu"
+config.front_end = "OpenGL"
+config.prefer_egl = true
 
 -- Performance Settings
 config.max_fps = 144
@@ -34,7 +34,7 @@ config.window_padding = {
 	bottom = "0",
 }
 config.adjust_window_size_when_changing_font_size = false
-config.window_decorations = "RESIZE"
+config.window_decorations = "NONE"
 config.hide_tab_bar_if_only_one_tab = true
 -- config.colors.cursor_bg = "green"
 -- config.colors.cursor_fg = "white"
