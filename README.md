@@ -171,3 +171,20 @@ So I install ollama in my native macos machine.
   ```sh
   sudo ln -s ~/.colima/default/docker.sock /var/run/docker.sock
   ```
+### Git
+Following this since I don't use browser in the vm
+
+- gen ssh key
+```bash
+ssh-keygen -t ed25519 -C "email@example.com"
+cat ~/.ssh/id_ed25519.pub
+```
+
+-> add this to [git-keys](https://github.com/settings/keys) 
+
+- check connect
+```bash
+ssh -T git@github.com
+```
+-> yes
+- clone or push repo using ssh link, remote, ...
