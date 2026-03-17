@@ -5,4 +5,5 @@ profile undocked {
 profile docked {
     output HDMI-A-1 enable mode 3840x2160@60Hz scale 1.5
     output eDP-1 disable
+    exec swaymsg workspace 1, move workspace to HDMI-A-1
 }
