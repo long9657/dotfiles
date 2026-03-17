@@ -15,7 +15,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 # Recommends: foot
-set $term kitty
+set $term ghostty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -237,7 +237,7 @@ for_window [title="Catfish"] floating enable
 
 # terminals
 for_window [app_id=Alacritty] floating enable
-for_window [app_id=kitty] floating enable
+for_window [app_id=ghostty] floating enable
 
 # dialogs
 for_window [app_id=zenity] floating enable
