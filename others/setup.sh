@@ -3,8 +3,8 @@ set -e
 
 PKGS=(
     'stow' 'bat' 'nvidia-inst' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree'
-    'discord' 'qutebrowser' 'neovim' 'xclip' 'python-pip' 'nodejs' 'npm' 
-    'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd'
+    'discord' 'qutebrowser' 'neovim' 'python-pip' 'nodejs' 'npm' 
+    'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli'
 )
 AUR=('ghostty')
 
