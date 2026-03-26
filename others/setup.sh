@@ -6,7 +6,7 @@ PKGS=(
     'discord' 'qutebrowser' 'neovim' 'python-pip' 'nodejs' 'npm' 'kitty'
     'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli'
 )
-AUR=('ghostty')
+AUR=('ghostty' 'microsoft-edge-stable-bin' 'postman-bin')
 
 sudo pacman -Syu --noconfirm --needed "${PKGS[@]}"
 yay -S --noconfirm --needed "${AUR[@]}"
