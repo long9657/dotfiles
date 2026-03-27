@@ -2,9 +2,10 @@
 set -e
 
 PKGS=(
-    'stow' 'bat' 'nvidia-inst' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree'
-    'discord' 'qutebrowser' 'neovim' 'python-pip' 'nodejs' 'npm' 'kitty' 'kanshi' 'picom' 'xclip'
+    'stow' 'bat' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree'
+    'discord' 'qutebrowser' 'neovim' 'python-pip' 'nodejs' 'npm' 'kitty'  'picom' 'xclip'
     'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli'
+#'nvidia-inst' 'kanshi'
 )
 AUR=('ghostty' 'microsoft-edge-stable-bin' 'postman-bin')
 
