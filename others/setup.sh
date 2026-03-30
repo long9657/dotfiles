@@ -2,8 +2,8 @@
 set -e
 
 PKGS=(
-    'stow' 'bat' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree'
-    'discord' 'qutebrowser' 'neovim' 'python-pip' 'nodejs' 'npm' 'kitty'  'picom' 'xclip'
+    'stow' 'bat' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree' 'kanshi'
+    'discord' 'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm' 'kitty'  'picom' 'xclip'
     'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli'
 #'nvidia-inst' 'kanshi'
 )
