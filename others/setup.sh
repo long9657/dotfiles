@@ -4,7 +4,7 @@ set -e
 PKGS=(
     'stow' 'bat' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree' 'kanshi'
     'discord' 'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm' 'kitty'  'picom' 'xclip'
-    'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli'
+    'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli' 'xwayland-satellite'
 #'nvidia-inst' 'kanshi'
 )
 AUR=('ghostty' 'microsoft-edge-stable-bin' 'postman-bin')
