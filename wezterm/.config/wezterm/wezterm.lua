@@ -228,5 +228,10 @@ config.keys = {
 		end),
 	},
 }
+
+-- Windows thing
+-- config.default_prog = { 'pwsh.exe', '-NoLogo' }
+-- config.default_domain = 'WSL:FedoraLinux-43'
+
 -- and finally, return the configuration to wezterm
 return config
