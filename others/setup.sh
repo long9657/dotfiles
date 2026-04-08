@@ -14,6 +14,8 @@ AUR=('ghostty' 'postman-bin'  'ttf-comic-mono-git' 'ttf-blex-nerd-font-git'
 sudo pacman -Syu --noconfirm --needed "${PKGS[@]}"
 yay -S --noconfirm --needed "${AUR[@]}"
 
+sudo systemctl enable --now bluetooth
+
 [ ! -d "$HOME/.oh-my-zsh" ] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 ZC=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}
