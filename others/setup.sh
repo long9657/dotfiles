@@ -2,12 +2,14 @@
 set -e
 
 PKGS=(
-    'stow' 'bat' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree' 'kanshi'
-    'discord' 'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm' 'kitty'  'picom' 'xclip'
-    'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli' 'xwayland-satellite'
-#'nvidia-inst' 'kanshi'
+    'stow' 'bat' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree'
+    'discord' 'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm' 'picom' 'xclip'
+    'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli' 
+#'nvidia-inst' 'kanshi' 'xwayland-satellite' 'kitty' 'kanshi'
 )
-AUR=('ghostty' 'microsoft-edge-stable-bin' 'postman-bin')
+AUR=('ghostty' 'postman-bin'  'ttf-comic-mono-git' 'ttf-blex-nerd-font-git'
+# 'microsoft-edge-stable-bin'
+)
 
 sudo pacman -Syu --noconfirm --needed "${PKGS[@]}"
 yay -S --noconfirm --needed "${AUR[@]}"
