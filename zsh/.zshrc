@@ -1,7 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export DISPLAY=:0
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 export PATH="$HOME/.local/share/bob/nightly/bin:$PATH"
