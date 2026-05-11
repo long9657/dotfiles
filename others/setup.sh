@@ -3,9 +3,9 @@ set -e
 
 PKGS=(
     'stow' 'bat' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree'
-    'discord' 'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm' 'picom' 'xclip' 'bluez' 'bluez-utils' 'blueman'
-    'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli' 
-#'nvidia-inst' 'kanshi' 'xwayland-satellite' 'kitty' 'kanshi'
+    'discord' 'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm'  'xclip' 'bluez' 'bluez-utils' 'blueman'
+    'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli' 'kitty' 'kanshi'
+#'nvidia-inst' 'kanshi' 'xwayland-satellite' 'picom'
 )
 AUR=('ghostty' 'postman-bin'  'ttf-comic-mono-git' 'ttf-blex-nerd-font-git'
 # 'microsoft-edge-stable-bin'
