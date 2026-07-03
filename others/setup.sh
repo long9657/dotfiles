@@ -3,10 +3,10 @@ set -e
 
 PKGS=(
     'stow' 'bat' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree'
-    'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm' 'xclip' 'bluez' 
+    'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm' 'bluez' 
     'bluez-utils' 'blueman' 'jdk-openjdk' 'ttf-inconsolata-nerd' 
     'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli' 'kitty' 
-    'kanshi' 'ghostty' 'flatpak'
+    'kanshi' 'ghostty' 'flatpak' 'lazygit' 'fastfetch'
 )
 
 sudo pacman -Syu --noconfirm --needed "${PKGS[@]}"
@@ -29,3 +29,9 @@ flatpak install -y flathub com.github.tchx84.Flatseal
 
 flatpak override --user --socket=wayland
 flatpak override --user --env=ELECTRON_OZONE_PLATFORM_HINT=auto
+
+killall ibus-daemon || true
+
+paru -S --noconfirm --needed fcitx5-lotus-bin
+
+sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service || (sudo systemd-sysusers && sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service)
