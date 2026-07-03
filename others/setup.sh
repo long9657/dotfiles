@@ -20,7 +20,9 @@ ZC=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}
 [ ! -d "$ZC/plugins/zsh-syntax-highlighting" ] && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZC/plugins/zsh-syntax-highlighting"
 [ ! -d "$HOME/.tmux/plugins/tpm" ] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-[ "$SHELL" != "$(which zsh)" ] && chsh -s $(which zsh)
+if [ "$SHELL" != "$(which zsh)" ]; then
+    sudo chsh -s "$(which zsh)" "$USER"
+fi
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub com.discordapp.Discord
@@ -32,6 +34,6 @@ flatpak override --user --env=ELECTRON_OZONE_PLATFORM_HINT=auto
 
 killall ibus-daemon || true
 
-paru -S --noconfirm --needed fcitx5-lotus-bin
+yay -S --noconfirm --needed fcitx5-lotus-bin
 
 sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service || (sudo systemd-sysusers && sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service)
