@@ -3,16 +3,13 @@ set -e
 
 PKGS=(
     'stow' 'bat' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree'
-    'discord' 'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm'  'xclip' 'bluez' 'bluez-utils' 'blueman'
-    'jdk-openjdk' 'ttf-inconsolata-nerd' 'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli' 'kitty' 'kanshi'
-#'nvidia-inst' 'kanshi' 'xwayland-satellite' 'picom'
-)
-AUR=('ghostty' 'postman-bin'  'ttf-comic-mono-git' 'ttf-blex-nerd-font-git'
-# 'microsoft-edge-stable-bin'
+    'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm' 'xclip' 'bluez' 
+    'bluez-utils' 'blueman' 'jdk-openjdk' 'ttf-inconsolata-nerd' 
+    'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli' 'kitty' 
+    'kanshi' 'ghostty' 'flatpak'
 )
 
 sudo pacman -Syu --noconfirm --needed "${PKGS[@]}"
-yay -S --noconfirm --needed "${AUR[@]}"
 
 sudo systemctl enable --now bluetooth
 
@@ -24,3 +21,11 @@ ZC=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}
 [ ! -d "$HOME/.tmux/plugins/tpm" ] && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 [ "$SHELL" != "$(which zsh)" ] && chsh -s $(which zsh)
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y flathub com.discordapp.Discord
+flatpak install -y flathub com.getpostman.Postman
+flatpak install -y flathub com.github.tchx84.Flatseal
+
+flatpak override --user --socket=wayland
+flatpak override --user --env=ELECTRON_OZONE_PLATFORM_HINT=auto
