@@ -37,3 +37,12 @@ killall ibus-daemon || true
 yay -S --noconfirm --needed fcitx5-lotus-bin swayfx
 
 sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service || (sudo systemd-sysusers && sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service)
+
+cat << 'EOF' >> ~/.config/sway/config.d/theme
+corner_radius 12
+shadows on
+blur enable
+blur_passes 3
+blur_radius 7
+default_dim_inactive 0.3
+EOF
