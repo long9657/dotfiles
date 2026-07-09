@@ -34,7 +34,7 @@ flatpak override --user --env=ELECTRON_OZONE_PLATFORM_HINT=auto
 
 killall ibus-daemon || true
 
-yay -S --noconfirm --needed fcitx5-lotus-bin swayfx
+yay -S --noconfirm --needed --ask 4 fcitx5-lotus-bin swayfx
 
 sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service || (sudo systemd-sysusers && sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service)
 
