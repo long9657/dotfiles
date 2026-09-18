@@ -24,6 +24,13 @@ if [ "$SHELL" != "$(which zsh)" ]; then
     sudo chsh -s "$(which zsh)" "$USER"
 fi
 
+[ ! -d "$HOME/.sdkman" ] && curl -s "https://get.sdkman.io?ci=true" | bash
+
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+sdk list java | grep -q '17.0.12-oracle' || sdk install java 17.0.12-oracle
+sdk list java | grep -q '26.0.2-oracle' || sdk install java 26.0.2-oracle
+
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install -y flathub com.discordapp.Discord
 flatpak install -y flathub com.getpostman.Postman
@@ -38,7 +45,10 @@ yay -S --noconfirm --needed --ask 4 fcitx5-lotus-bin swayfx
 
 sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service || (sudo systemd-sysusers && sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service)
 
-cat << 'EOF' >> ~/.config/sway/config.d/theme
+THEME="$HOME/.config/sway/config.d/theme"
+
+if [ ! -f "$THEME" ]; then
+    cat << 'EOF' >> "$THEME"
 corner_radius 12
 shadows on
 blur enable
@@ -46,3 +56,4 @@ blur_passes 3
 blur_radius 7
 default_dim_inactive 0.3
 EOF
+fi
