@@ -41,19 +41,6 @@ flatpak override --user --env=ELECTRON_OZONE_PLATFORM_HINT=auto
 
 killall ibus-daemon || true
 
-yay -S --noconfirm --needed --ask 4 fcitx5-lotus-bin swayfx
+yay -S --noconfirm --needed --ask 4 fcitx5-lotus-bin
 
 sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service || (sudo systemd-sysusers && sudo systemctl enable --now fcitx5-lotus-server@$(whoami).service)
-
-THEME="$HOME/.config/sway/config.d/theme"
-
-if [ ! -f "$THEME" ]; then
-    cat << 'EOF' >> "$THEME"
-corner_radius 12
-shadows on
-blur enable
-blur_passes 3
-blur_radius 7
-default_dim_inactive 0.3
-EOF
-fi
