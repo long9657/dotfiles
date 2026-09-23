@@ -6,7 +6,7 @@ PKGS=(
     'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm' 'bluez' 
     'bluez-utils' 'blueman' 'jdk-openjdk' 'ttf-inconsolata-nerd' 
     'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli' 'kitty' 
-    'kanshi' 'ghostty' 'flatpak' 'lazygit' 'fastfetch' 'fcitx5-config-qt'
+    'kanshi' 'ghostty' 'flatpak' 'lazygit' 'fastfetch' 'fcitx5-config-qt' 'zip'
 )
 
 sudo pacman -Syu --noconfirm --needed "${PKGS[@]}"
