@@ -4,7 +4,7 @@ set -e
 PKGS=(
     'stow' 'bat' 'tmux' 'lsd' 'zoxide' 'fzf' 'ripgrep' 'fd' 'tree'
     'qutebrowser' 'bob' 'python-pip' 'nodejs' 'npm' 'bluez' 
-    'bluez-utils' 'blueman' 'jdk-openjdk' 'ttf-inconsolata-nerd' 
+    'bluez-utils' 'blueman' 'ttf-inconsolata-nerd' 'xarchiver'
     'ttf-jetbrains-mono-nerd' 'zsh' 'tree-sitter-cli' 'kitty' 
     'kanshi' 'ghostty' 'flatpak' 'lazygit' 'fastfetch' 'fcitx5-config-qt' 'zip'
 )
